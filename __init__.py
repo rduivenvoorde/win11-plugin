@@ -30,7 +30,7 @@ class Win11TestPlugin:
         # playing with this
         # SEE: https://doc.qt.io/qt-5/qt.html#WindowModality-enum
         self.dlg.setModal(True)
-        self.main_dlg.setWindowModality(Qt.ApplicationModal)
+        self.dlg.setWindowModality(Qt.ApplicationModal)
 
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
