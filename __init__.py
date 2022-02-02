@@ -10,6 +10,7 @@
 #---------------------------------------------------------------------
 
 from PyQt5.QtWidgets import QAction, QMessageBox
+from PyQt5.QtCore import Qt
 from .giant_dialog import GiantDialog
 
 def classFactory(iface):
@@ -25,6 +26,11 @@ class Win11TestPlugin:
         self.action.triggered.connect(self.run)
         self.iface.addToolBarIcon(self.action)
         self.dlg = GiantDialog(self.iface.mainWindow())
+
+        # playing with this
+        # SEE: https://doc.qt.io/qt-5/qt.html#WindowModality-enum
+        self.dlg.setModal(True)
+        self.main_dlg.setWindowModality(Qt.ApplicationModal)
 
     def unload(self):
         self.iface.removeToolBarIcon(self.action)
