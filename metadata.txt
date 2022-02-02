@@ -1,0 +1,9 @@
+[general]
+name=Win11TestPlugin
+description=Win11 Dialog Test Plugin
+about=Win11 Dialog Test Plugin
+version=1.0
+qgisMinimumVersion=3.0
+author=Richard Duivenvoorde
+email=richard@duif.net
+repository=URL to the code repository
